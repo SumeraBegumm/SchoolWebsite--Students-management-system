@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<style>
+body {
+	background-image:
+		url("https://knowmax-ai-website.s3.amazonaws.com/wp-content/uploads/2021/02/21172042/KB-Management-for-Enterprise.jpg");
+	background-color: #cccccc;
+	background-image {max-width: 100%;
+	height: auto;
+	
+	
+}
+}
+</style>
+<style>
+   p{color: white;}
+
+</style>
+
+<title>Student</title>
+</head>
+<body>
+
+
+	<div class="container">
+		<div>
+			<nav
+				class="navbar navbar-expand-lg navbar navbar-dark bg-dark fixed-top">
+				<a class="navbar-brand" href="#"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarText" aria-controls="navbarText"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<!--<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+    Menu
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">About</a></li>
+    <li><a class="dropdown-item" href="#">Academics</a></li>
+    <li><a class="dropdown-item" href="#">AboutStudents</a></li>
+  </ul>
+</div>-->
+				<div class="collapse navbar-collapse" id="navbarText">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item"><a class="nav-link"
+							th:href="@{/HomePage}">Home</a></li>
+						<li class="nav-item active"><a class="nav-link"
+							th:href="@{/seeallstudents}">Students <span class="sr-only">(current)</span>
+						</a></li>
+						<li class="nav-item"><a class="nav-link"
+							th:href="@{/addNewStudent}">ENROLLMENT</a></li>
+						<li class="nav-item active"><a class="nav-link"
+							th:href="@{/CONTACT}">Contact Us <span class="sr-only">(current)</span>
+						</a></li>
+						<li class="nav-item active"><a class="nav-link"
+							th:href="@{/photogallery}">Gallery <span class="sr-only">(current)</span>
+						</a></li>
+
+
+					</ul>
+
+					<div>
+						<ul class="nav justify-content-end">
+							<li class="nav-item"><a class="nav-link active"
+								aria-current="page" th:href="@{/logout}" onclick="return confirm('You are logging out of the page?');"><button
+										type="button" class="btn btn-danger">LOGOUT</button></a></li>
+						</ul>
+					</div>
+				</div>
+
+			</nav>
+		</div>
+		<br>
+
+
+	</div>
+
+<h1>Welcome to CGR International School</h1>
+<p>CGR International School, one of the most prestigious schools in Hyderabad, offers a blend of Pre-Primary, Primary, and Secondary School Programs. Established in January 2010, the school welcomes new students every year from pre-kindergarten through high school. Taught by qualified, experienced and dedicated faculty, the school curriculum is centered on providing the best possible learning opportunities to students. The school, an offshoot of The Annamacharya Educational Trust, is managed by esteemed academic practitioners whose interests have spread across the domains of Engineering, Management, Education and Pharmacy.
+
+CGR's vision is to guide its students in setting and attaining meaningful goals that contribute to their strong academic knowledge and life skills.</p>
+<img src="https://i.gifer.com/origin/5a/5aef6fbb932ed6179c2dadf448bcb8ae_w200.gif"/>
+</body>
+</html>

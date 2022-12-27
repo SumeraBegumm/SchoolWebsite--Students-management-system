@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<style>
+body {
+	background-image:
+		url("https://thumbs.dreamstime.com/b/back-to-school-concept-school-supplies-back-to-school-concept-school-supplies-copy-space-155406002.jpg");
+	background-color: #cccccc;
+}
+
+background-image {
+	max-width: 100%;
+	height: auto;
+}
+</style>
+
+<title>Student</title>
+</head>
+<body>
+<div>
+		<ul class="nav justify-content-end">
+			<li class="nav-item"><a class="nav-link active"
+				aria-current="page" th:href="@{/HomePage}"
+				onclick="return confirm('You are going to starting page?');"><button
+						type="button" class="btn btn-success">Home</button></a></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<div></div>
+		<br>
+
+		<div style="margin-top: 2rem;">
+
+			<h1 class="row">List of Students</h1>
+			<a th:href="@{/addNewStudent}" class="btn btn-primary btn-smmb-3">ENROLLMENT</a>
+
+
+			<table class="table table-striped table-bordered">
+				<thead class="table-dark">
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Fav Subject</th>
+						<th>Action</th>
+
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr th:each="student : ${studentsList} ">
+						<td th:text="${student.firstname}"></td>
+						<td th:text="${student.lastname}"></td>
+						<td th:text="${student.favSub}"></td>
+						<td><a
+							th:href="@{/deleteStudent/{id}(id=${student.rollNum})}"
+							onclick="return confirm('Are you sure you want to delete this item?');"
+							class="btn btn-danger">Delete</a> <a
+							th:href="@{/updateStudent/{id}(id=${student.rollNum})}"
+							class="btn btn-secondary">Update</a></td>
+					</tr>
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+	
+</body>
+</html>html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

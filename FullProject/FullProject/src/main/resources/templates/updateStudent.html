@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+	<style>
+body{
+
+ background-image: url("https://media.istockphoto.com/id/1263424631/photo/e-learning-online-education-or-internet-encyclopedia-concept-open-laptop-and-book-compilation.jpg?s=1024x1024&w=is&k=20&c=fw41gJNgNkD1VmJ7Y0j3R7giM7wT0EwfIgqWFdCmX4s=");
+ background-color: #cccccc;
+ 
+ 
+   
+background-image{max-width: 100%;
+  height: auto;}
+  }
+
+</style>
+<title>update student</title>
+</head>
+<body>
+<div class="container">
+        
+        <h2>Update Student</h2>
+ 
+        <form  th:action="@{/updateAndSaveStudent/{id}(id=${update.rollNum})}" th:object="${update}"
+            method="POST">
+             
+            <div class="form-group">
+					<label><b> Enter first name to Update:</b> </label> <input type="text" name="fName"
+						th:field="*{firstname}" class="form-control"
+						placeholder="Enter your firstname" />
+						
+						<label> <b>Enter last name to update:</b> </label> 
+							<input type="text" name="lName" 
+							th:field="*{lastname}"
+						class="form-control" placeholder="Enter your lastname" /> 
+						
+						<label><b>Enter FavSub to update: </b></label> 
+						<input type="text" name="favSub"
+						th:field="*{favSub}" class="form-control"
+						placeholder="Enter your favSub" />
+				</div>
+				
+				<div class = "box-footer">
+				<button type = "submit" class = "btn btn-primary">
+				Update
+				</button>
+				
+				</div>
+        </form>
+         
+       
+        
+    </div>
+</body>
+</html>

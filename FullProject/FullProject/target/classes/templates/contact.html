@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<style>
+body {
+	background-image:
+		url("https://img.freepik.com/premium-photo/concept-contact-us-blank-wooden-cubes-square-dice-with-symbol-email-telephone-address-placed-wood-background_44868-1254.jpg?w=2000");
+	background-color: #cccccc;
+	background-size: contain;
+	width: 1000px;
+	height: 750px;
+	background-image {max-width: 100%;
+	height: auto;
+}
+}
+</style>
+
+</head>
+<body>
+	<div>
+		<ul class="nav justify-content-end">
+			<li class="nav-item"><a class="nav-link active"
+				aria-current="page" th:href="@{/HomePage}"
+				onclick="return confirm('You are going to starting page?');"><button
+						type="button" class="btn btn-success">Home</button></a></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<h1>FEEL FREE TO REACH US</h1>
+		</div>
+		<div class="container">
+			<div class="row">
+				<h3>
+					<i>please fill the details correctly</i>
+				</h3>
+			</div>
+		</div>
+		<div class="card-body">
+			<form th:action=@{/insertStudents} th:object="${stdObj}"
+				method="post">
+				<div class="form-group">
+					<label><b> Enter first name:</b> </label> <input type="text"
+						name="fName" th:field="*{firstname}" class="form-control"
+						placeholder="Enter your firstname" /> <label> <b>Enter
+							last name:</b>
+					</label> <input type="text" name="lName" th:field="*{lastname}"
+						class="form-control" placeholder="Enter your lastname" />
+
+
+				</div>
+
+				<div class="box-footer">
+					<button type="submit" class="btn btn-primary">Submit</button>
+
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="card-body">
+			<table th:action=@{/CONTACT} th:object="${stdObj}" method="post">
+				<tr>
+					<td><div class="card" style="width: 18rem;">
+							<img
+								src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGvmZ8vIQYrSjkheDGWNr6gxQdSbhH7_oN1dqnJJ4ZuzPXnAKmSpSijpjKJL98t7TcZvU&usqp=CAU"
+								class="card-img-top" alt="...">
+
+							<div class="card-body">
+								<p class="card-text">Our staff give there 100% to make your
+									childerns future bright...</p>
+							</div>
+						</div>
+						<div class="col"></div>
+						<div class="col"></div>
+					<td>
+						<div class="col">
+							<div class="card" style="width: 18rem;">
+								<img
+									src="https://marketplace.canva.com/EAFDRhC1w8I/2/0/1600w/canva-blue-yellow-simple-school-business-card-L4kJh79Wy8s.jpg"
+									class="card-img-top" alt="...">
+								<div class="card-body">
+									<p class="card-text">you can reach us here...</p>
+								</div>
+							</div>
+						</div>
+					</td>
+
+				</tr>
+
+
+
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>
